@@ -11,7 +11,7 @@
 char ***cjson_get_obj_array(const cjson *obj)
 {
     const data *temp;
-    char *** out = malloc(sizeof(char **) * (obj->lenght + 1));
+    char ***out = malloc(sizeof(char **) * (obj->lenght + 1));
     int index = 0;
 
     for (int i = 0; i < obj->lenght; ++i)
