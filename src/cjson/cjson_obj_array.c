@@ -5,8 +5,8 @@
 ** mylib
 */
 
-#include "../../header/cjson.h"
-#include "../../header/utils.h"
+#include "../../includes/cjson.h"
+#include "../../includes/utils.h"
 
 char ***cjson_get_obj_array(const cjson *obj)
 {

@@ -5,8 +5,8 @@
 ** mylib
 */
 
-#include "../../header/cjson.h"
-#include "../../header/utils.h"
+#include "../../includes/cjson.h"
+#include "../../includes/utils.h"
 
 bool cjson_write_file(char *path, int flags, const cjson *obj)
 {

@@ -5,7 +5,7 @@
 ** mylib
 */
 
-#include "../../header/utils.h"
+#include "../../includes/utils.h"
 
 void my_strcopy(char *out, const char *src)
 {

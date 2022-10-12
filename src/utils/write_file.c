@@ -5,7 +5,7 @@
 ** mylib
 */
 
-#include "../../header/utils.h"
+#include "../../includes/utils.h"
 
 int write_file(char *path, char *str, int flags)
 {

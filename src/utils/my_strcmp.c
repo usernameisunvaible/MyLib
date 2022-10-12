@@ -5,7 +5,7 @@
 ** mylib
 */
 
-#include "../../header/utils.h"
+#include "../../includes/utils.h"
 
 bool my_strcomp(const char *str_a, const char *str_b)
 {

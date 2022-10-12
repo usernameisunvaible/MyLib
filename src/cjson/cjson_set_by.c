@@ -5,8 +5,8 @@
 ** mylib
 */
 
-#include "../../header/cjson.h"
-#include "../../header/utils.h"
+#include "../../includes/cjson.h"
+#include "../../includes/utils.h"
 
 void cjson_set_by_key(cjson *obj, const char *key, const char *value)
 {

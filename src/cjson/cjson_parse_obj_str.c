@@ -5,8 +5,8 @@
 ** mylib
 */
 
-#include "../../header/cjson.h"
-#include "../../header/utils.h"
+#include "../../includes/cjson.h"
+#include "../../includes/utils.h"
 
 static int get_data_size(const char *src)
 {

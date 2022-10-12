@@ -5,8 +5,7 @@
 ## makefile
 ##
 
-SRC	=	src/main.c	\
-		src/cjson/cjson_free.c	\
+SRC	=	src/cjson/cjson_free.c	\
 		src/cjson/cjson_get_by.c	\
 		src/cjson/cjson_push.c	\
 		src/cjson/cjson_obj_strj.c	\
@@ -35,12 +34,11 @@ SRC	=	src/main.c	\
 
 OBJ	=	$(SRC:.c=.o)
 
-CFLAGS	+=	-g
 
-NAME	=	MyLib
+NAME	=	libmylib.a
 
 $(NAME):	$(OBJ)
-	gcc -o $(NAME) $(OBJ) -Wall
+	ar rc $(NAME) $(OBJ)
 	rm -f $(OBJ)
 
 all:	$(NAME)
