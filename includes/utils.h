@@ -26,6 +26,16 @@
 
 #include <stdarg.h>
 
+typedef enum {
+    str_dec_ = 1,
+    int_dec_ = 2,
+    str_oct_ = 3,
+    int_oct_ = 4,
+    str_bin_ = 5,
+    int_bin_ = 6,
+    str_hex_ = 7,
+}base_type;
+
 int my_strlen(const char *str);
 char *my_strdup(const char *src);
 void my_strcopy(char *out, const char *src);
@@ -34,7 +44,7 @@ char *read_file(const char *path, int buf_size);
 int write_file(char *path, char *str, int  flags);
 char *my_strcat(char *out, char *in);
 char *my_itoa(int i);
-void my_revstr(char *str);
+char *my_revstr(char *str);
 int my_atoi(char *str);
 void my_print(char *str, ...);
 void write_int(int i);

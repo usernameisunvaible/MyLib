@@ -7,7 +7,7 @@
 
 #include "../../includes/utils.h"
 
-void my_revstr(char *str)
+char *my_revstr(char *str)
 {
     char tmp;
     int index = 0;
@@ -20,4 +20,5 @@ void my_revstr(char *str)
         ++index;
         --len;
     }
+    return str;
 }
