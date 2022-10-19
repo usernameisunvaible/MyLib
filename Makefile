@@ -31,6 +31,9 @@ SRC	=	src/cjson/cjson_free.c	\
 		src/utils/my_print_types.c	\
 		src/utils/my_fprint.c	\
 		src/utils/my_fprint_types.c	\
+		src/utils/my_power.c	\
+		src/utils/my_index_of.c	\
+		src/utils/my_base_to_base.c	\
 
 OBJ	=	$(SRC:.c=.o)
 

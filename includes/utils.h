@@ -15,6 +15,8 @@
     #define PRINT_BUF_SIZE 1024
     #define FPRINT_BUF_SIZE 1024
 
+    #define DIGITS "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
 #include <stdbool.h>
 #include <sys/types.h>
 #include <sys/stat.h>
@@ -54,6 +56,8 @@ void fwrite_int(int i, int fd);
 void fwrite_str(char *str, int fd);
 void my_fprint(char *path, int flags, char *str, ...);
 void my_errprint(char *str, ...);
-
+int my_index_of(char *str, char c);
+int my_power(int nb, int p);
+char *my_base_changer(char *in, int in_base, int out_base);
 
 #endif // !UTLIS_H_
