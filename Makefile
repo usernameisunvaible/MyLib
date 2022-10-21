@@ -34,6 +34,7 @@ SRC	=	src/cjson/cjson_free.c	\
 		src/utils/my_power.c	\
 		src/utils/my_index_of.c	\
 		src/utils/my_base_to_base.c	\
+		src/utils/my_sort.c	\
 
 OBJ	=	$(SRC:.c=.o)
 
@@ -42,6 +43,7 @@ NAME	=	libmylib.a
 
 $(NAME):	$(OBJ)
 	ar rc $(NAME) $(OBJ)
+	gcc main.c -L. -lmylib
 	rm -f $(OBJ)
 
 all:	$(NAME)

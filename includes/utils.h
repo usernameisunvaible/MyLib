@@ -59,5 +59,6 @@ void my_errprint(char *str, ...);
 int my_index_of(char *str, char c);
 int my_power(int nb, int p);
 char *my_base_changer(char *in, int in_base, int out_base);
+int *my_sort(int *array, int size);
 
 #endif // !UTLIS_H_
