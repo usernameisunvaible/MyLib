@@ -28,16 +28,6 @@
 
 #include <stdarg.h>
 
-typedef enum {
-    str_dec_ = 1,
-    int_dec_ = 2,
-    str_oct_ = 3,
-    int_oct_ = 4,
-    str_bin_ = 5,
-    int_bin_ = 6,
-    str_hex_ = 7,
-}base_type;
-
 int my_strlen(const char *str);
 char *my_strdup(const char *src);
 void my_strcopy(char *out, const char *src);
