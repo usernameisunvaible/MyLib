@@ -76,7 +76,7 @@ static char *end(char *out, bool pretty)
 
     if (pretty) {
         out[tmp] = '\n';
-        out[tmp + 1] = OPEN_CHAR[0];
+        out[tmp + 1] = CLOSE_CHAR[0];
         out[tmp + 2] = 0;
     } else {
         out[tmp] = CLOSE_CHAR[0];

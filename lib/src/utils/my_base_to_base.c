@@ -48,7 +48,7 @@ char *my_base_changer(char *in, int in_base, int out_base)
     int dec = my_base_to_dec((in[0] == '-' ? in + 1 : in), in_base);
     char *out;
     char *tmp;
-    
+
     out = my_dec_to_base(dec, out_base);
     if (in[0] == '-') {
         tmp = my_strdup(out);

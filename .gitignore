@@ -1,5 +1,6 @@
 .vscode/
 a.out
-libmylib.a
+*.a
 main.c
 vgcore.*
+*.o

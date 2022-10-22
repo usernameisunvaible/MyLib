@@ -20,7 +20,6 @@ static int *find_lowest(int *array, int size)
             lowest = array[i];
             nb = 1;
         }
-        
     }
     out[0] = lowest;
     out[1] = nb;
@@ -33,7 +32,7 @@ static int **init(int *out, int *array, int size)
 
     infos[0] = find_lowest(array, size);
     for (int i = 1; i < 4; ++i)
-        infos[i] = malloc(sizeof(int) * 2);;
+        infos[i] = malloc(sizeof(int) * 2);
     for (int i = 0; i < size; ++i)
         out[i] = 0;
     for (int i = 0; i < infos[0][1]; ++i)

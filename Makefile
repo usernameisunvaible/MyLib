@@ -5,53 +5,56 @@
 ## makefile
 ##
 
-SRC	=	src/cjson/cjson_free.c	\
-		src/cjson/cjson_get_by.c	\
-		src/cjson/cjson_push.c	\
-		src/cjson/cjson_obj_strj.c	\
-		src/cjson/cjson_init.c	\
-		src/cjson/cjson_obj_array.c	\
-		src/cjson/cjson_delete_by.c	\
-		src/cjson/cjson_set_by.c	\
-		src/cjson/cjson_parse_obj_str.c	\
-		src/cjson/cjson_utils.c	\
-		src/cjson/cjson_write_file.c	\
-		src/cjson/cjson_read_file.c	\
-		src/utils/read_file.c	\
-		src/utils/write_file.c	\
-		src/utils/my_strlen.c	\
-		src/utils/my_strcmp.c	\
-		src/utils/my_strdup.c	\
-		src/utils/my_strcopy.c	\
-		src/utils/my_strcat.c	\
-		src/utils/my_print.c	\
-		src/utils/my_itoa.c	\
-		src/utils/my_atoi.c	\
-		src/utils/my_revstr.c	\
-		src/utils/my_print_types.c	\
-		src/utils/my_fprint.c	\
-		src/utils/my_fprint_types.c	\
-		src/utils/my_power.c	\
-		src/utils/my_index_of.c	\
-		src/utils/my_base_to_base.c	\
-		src/utils/my_sort.c	\
+########### CONST ##########
+CURRENT_PATH = $(shell pwd)
 
+############ SRC ###########
+SRC	=	main.c	\
+
+
+
+########## COMPIL ##########
 OBJ	=	$(SRC:.c=.o)
+CFLAGS	+=	-g
 
 
-NAME	=	libmylib.a
+
+########### MYLIB ###########
+MYLIB_PATH = lib 
+MYLIB_NAME = libmylib.a
+
+MY_LIB_COMÏL =	rm -fr $(MYLIB_NAME);\
+				cd $(MYLIB_PATH);\
+				make;\
+				mv $(MYLIB_NAME) $(CURRENT_PATH);\
+				cd $(CURRENT_PATH)
+
+MY_LIB_CLEAN =	cd $(MYLIB_PATH);\
+				make clean;\
+				cd $(CURRENT_PATH)
+
+MY_LIB_FCLEAN =	cd $(MYLIB_PATH);\
+				make fclean;\
+				cd $(CURRENT_PATH)
+
+############ LIBS ###########
+LIB_LINKS = 	-L. -lmylib
+
+########## METHODES #########
+NAME	=	myLib
 
 $(NAME):	$(OBJ)
-	ar rc $(NAME) $(OBJ)
-	gcc main.c -L. -lmylib
-	rm -f $(OBJ)
+	$(MY_LIB_COMÏL)
+	gcc -o $(NAME) $(OBJ) $(LIB_LINKS)
 
 all:	$(NAME)
 
 clean:
-	rm -f $(OBJ)
+	rm -fr $(OBJ)
+	$(MY_LIB_CLEAN)
 
 fclean:	clean
-	rm -f $(NAME)
+	rm -fr $(NAME)
+	$(MY_LIB_FCLEAN)
 
 re:	fclean all
