@@ -10,6 +10,7 @@
 int my_power(int nb, int p)
 {
     int out = nb;
+
     if (p == 0)
         return 1;
     for (int i = 0; i < p - 1; ++i)
