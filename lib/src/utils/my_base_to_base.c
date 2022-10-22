@@ -37,7 +37,7 @@ static int my_base_to_dec(char *in, int base)
     int len = my_strlen(in) - 1;
 
     for (int i = 0; in[i]; ++i) {
-        out += my_index_of(DIGITS, in[i]) * my_power(base, len);
+        out += my_index_of_char(DIGITS, in[i]) * my_power(base, len);
         --len;
     }
     return out;
